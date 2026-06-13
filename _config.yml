@@ -1,0 +1,18 @@
+title: "Gibbs Nwemadji"
+author: "Gibbs Nwemadji"
+description: "Personal academic website of Gibbs Nwemadji — machine learning theory, statistical physics, LoRA fine-tuning, scaling laws, and quantum machine learning."
+url: ""
+baseurl: ""
+
+# Keep this path if your image is already in assets/Gibbs_Nwemadji.png.
+# You can later move it to assets/img/Gibbs_Nwemadji.png and update this line.
+profile_image: "assets/Gibbs_Nwemadji.png"
+cv: "assets/files/Gibbs_Nwemadji_CV.pdf"
+
+email: "tiakogibbs@gmail.com"
+github: "https://github.com/GibbsNwemadji"
+linkedin: "https://www.linkedin.com/in/gibbs-nwemadji"
+arxiv: "https://arxiv.org/abs/2602.02855"
+
+markdown: kramdown
+plugins: []
