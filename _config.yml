@@ -12,7 +12,7 @@ cv: "assets/files/Gibbs_Nwemadji_CV.pdf"
 email: "tiakogibbs@gmail.com"
 github: "https://github.com/GibbsNwemadji"
 linkedin: "https://www.linkedin.com/in/gibbs-nwemadji"
-arxiv: "https://arxiv.org/abs/2602.02855"
-
+arxiv: "https://arxiv.org/search/cs?searchtype=author&query=Nwemadji,+G"
+orcid: "https://orcid.org/0000-0001-7994-4810" # Replace with your actual ORCID URL
 markdown: kramdown
-plugins: []
+plugins: [] 
