@@ -1,0 +1,12 @@
+- label: News
+  url: "#news"
+- label: Research
+  url: "#research"
+- label: Publications
+  url: "#publications"
+- label: Events
+  url: "#events"
+- label: Path
+  url: "#path"
+- label: Contact
+  url: "#contact"

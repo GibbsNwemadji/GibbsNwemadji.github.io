@@ -1,0 +1,20 @@
+intro: >-
+  I use theoretical models and experiments to understand why neural networks
+  learn, specialize, adapt, and scale.
+items:
+  - title: "Learning dynamics and LoRA fine-tuning"
+    text: >-
+      I study how pre-training shapes downstream adaptation, and why stronger
+      representations can sometimes delay or hurt Low-Rank Adaptation.
+  - title: "Scaling laws and superposition"
+    text: >-
+      I am interested in whether scaling laws can emerge from superposition,
+      and how feature geometry changes the observed decay of error.
+  - title: "Teacher-student models"
+    text: >-
+      I use teacher-student settings to isolate mechanisms of specialization,
+      approximation, representation learning, and generalization.
+  - title: "Quantum machine learning"
+    text: >-
+      My earlier work connects quantum information, quantum algorithms, and
+      learning theory.

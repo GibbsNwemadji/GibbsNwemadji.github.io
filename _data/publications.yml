@@ -1,0 +1,17 @@
+- year: "2026"
+  title: "When pre-training hurts LoRA fine-tuning: a dynamical analysis via single-index models"
+  authors: "Gibbs Nwemadji, Bruno Loureiro, Jean Barbier."
+  venue: "arXiv:2602.02855."
+  links:
+    - label: "arXiv"
+      url: "https://arxiv.org/abs/2602.02855"
+
+- year: "2026"
+  title: "Generalization performance of narrow one-hidden layer networks in the teacher-student setting"
+  authors: "Rodrigo Pérez Ortiz, Gibbs Nwemadji, Jean Barbier, Federica Gerace, Alessandro Ingrosso, Clarissa Lauditi, Enrico M. Malatesta."
+  venue: "Journal of Statistical Mechanics: Theory and Experiment."
+
+- year: "2024"
+  title: "On the Capacity of a Quantum Perceptron for storing Biased Patterns"
+  authors: "Fabio Benatti, Giovanni Gramegna, Stefano Mancini, Gibbs Nwemadji."
+  venue: "Journal of Physics A."

@@ -1,0 +1,28 @@
+eyebrow: "ML theory · Statistical physics"
+name: "Gibbs Nwemadji"
+summary: >-
+  PhD student at SISSA, currently visiting Yale. I work on learning dynamics,
+  scaling laws, superposition, LoRA fine-tuning, and teacher-student models.
+photo_note: "Yale · 2026"
+keywords:
+  - Scaling laws
+  - LoRA fine-tuning
+  - Superposition
+  - Teacher-student models
+  - Quantum ML
+links:
+  - label: Latest news
+    url: "#news"
+    primary: true
+  - label: Publications
+    url: "#publications"
+  - label: Events
+    url: "#events"
+  - label: CV
+    url: "assets/files/Gibbs_Nwemadji_CV.pdf"
+  - label: arXiv
+    url: "https://arxiv.org/abs/2602.02855"
+  - label: GitHub
+    url: "https://github.com/GibbsNwemadji"
+  - label: Email
+    url: "mailto:tiakogibbs@gmail.com"

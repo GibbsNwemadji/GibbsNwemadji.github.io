@@ -1,1 +1,14 @@
-
+intro: >-
+  I am happy to discuss machine learning theory, statistical physics, scaling laws,
+  LoRA fine-tuning, and related questions.
+links:
+  - label: "tiakogibbs@gmail.com"
+    url: "mailto:tiakogibbs@gmail.com"
+  - label: "GitHub · GibbsNwemadji"
+    url: "https://github.com/GibbsNwemadji"
+  - label: "LinkedIn · gibbs-nwemadji"
+    url: "https://www.linkedin.com/in/gibbs-nwemadji"
+  - label: "arXiv · 2602.02855"
+    url: "https://arxiv.org/abs/2602.02855"
+  - label: "CV · PDF"
+    url: "assets/files/Gibbs_Nwemadji_CV.pdf"
