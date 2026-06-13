@@ -7,244 +7,652 @@
   <title>Gibbs Nwemadji Tiako</title>
 
   <style>
+    :root {
+      --bg: #f5f3ef;
+      --card: #ffffff;
+      --text: #1d1d1f;
+      --muted: #666;
+      --accent: #7b3f00;
+      --accent-dark: #3a1f04;
+      --blue: #12355b;
+      --border: #e1ddd5;
+      --shadow: 0 18px 45px rgba(0, 0, 0, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      max-width: 950px;
-      margin: 40px auto;
-      padding: 0 20px;
-      line-height: 1.6;
-      color: #222;
-      background: #fafafa;
-    }
-
-    header {
-      border-bottom: 1px solid #ddd;
-      margin-bottom: 25px;
-      padding-bottom: 20px;
-    }
-
-    h1 {
-      margin-bottom: 5px;
-      font-size: 2.4rem;
-    }
-
-    h2 {
-      margin-top: 35px;
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 5px;
+      margin: 0;
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(123, 63, 0, 0.12), transparent 35%),
+        radial-gradient(circle at top right, rgba(18, 53, 91, 0.14), transparent 32%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.65;
     }
 
     a {
-      color: #0056b3;
+      color: var(--blue);
       text-decoration: none;
+      font-weight: 600;
     }
 
     a:hover {
       text-decoration: underline;
     }
 
-    .subtitle {
-      font-size: 1.1rem;
-      color: #555;
-      margin-top: 0;
+    .page {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 30px 22px 70px;
     }
 
     .nav {
-      margin-top: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 55px;
     }
 
-    .nav a {
-      margin-right: 15px;
-      font-weight: bold;
+    .brand {
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      color: var(--accent-dark);
     }
 
-    .news-box {
-      background: #ffffff;
-      border: 1px solid #ddd;
-      border-left: 6px solid #0056b3;
-      padding: 20px;
-      margin: 25px 0 35px 0;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+    .nav-links {
+      display: flex;
+      gap: 22px;
+      flex-wrap: wrap;
+      font-size: 0.95rem;
     }
 
-    .news-box h2 {
-      margin-top: 0;
-      border-bottom: none;
-      padding-bottom: 0;
+    .nav-links a {
+      color: #2d2d2d;
+      font-weight: 700;
     }
 
-    .news-item {
-      margin-bottom: 16px;
+    .hero {
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 42px;
+      align-items: center;
+      margin-bottom: 45px;
     }
 
-    .news-item:last-child {
-      margin-bottom: 0;
+    .hero-card {
+      background: rgba(255, 255, 255, 0.78);
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      padding: 42px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
     }
 
-    .news-date {
-      font-weight: bold;
-      color: #333;
-    }
-
-    .news-item p {
-      margin: 3px 0 0 0;
-    }
-
-    .publication {
+    .eyebrow {
+      display: inline-block;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: rgba(123, 63, 0, 0.09);
+      color: var(--accent-dark);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
       margin-bottom: 18px;
     }
 
+    h1 {
+      font-size: clamp(2.6rem, 6vw, 5rem);
+      line-height: 0.98;
+      margin: 0 0 18px;
+      letter-spacing: -0.06em;
+      color: #111;
+    }
+
+    .subtitle {
+      font-size: 1.25rem;
+      color: var(--muted);
+      margin-bottom: 24px;
+      max-width: 720px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 28px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 18px;
+      border-radius: 999px;
+      font-weight: 800;
+      border: 1px solid var(--border);
+    }
+
+    .button.primary {
+      background: var(--accent-dark);
+      color: white;
+      border-color: var(--accent-dark);
+    }
+
+    .button.secondary {
+      background: white;
+      color: var(--accent-dark);
+    }
+
+    .photo-card {
+      position: relative;
+      background: var(--card);
+      border-radius: 34px;
+      padding: 14px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+      transform: rotate(1.2deg);
+    }
+
+    .photo-card img {
+      width: 100%;
+      display: block;
+      border-radius: 24px;
+      object-fit: cover;
+      aspect-ratio: 4 / 5;
+      background: #ddd;
+    }
+
+    .photo-caption {
+      padding: 14px 10px 4px;
+      color: var(--muted);
+      font-size: 0.92rem;
+      text-align: center;
+    }
+
+    .section {
+      margin-top: 42px;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 18px;
+    }
+
+    h2 {
+      font-size: 1.9rem;
+      letter-spacing: -0.04em;
+      margin: 0;
+      color: #111;
+    }
+
+    .section-note {
+      color: var(--muted);
+      margin: 0;
+      max-width: 560px;
+    }
+
+    .news-panel {
+      background: var(--accent-dark);
+      color: white;
+      border-radius: 30px;
+      padding: 30px;
+      box-shadow: var(--shadow);
+      margin-top: 10px;
+    }
+
+    .news-panel h2 {
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .news-item {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 22px;
+      padding: 18px;
+      min-height: 170px;
+    }
+
+    .news-date {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #f3d7b5;
+      margin-bottom: 10px;
+    }
+
+    .news-item p {
+      margin: 0;
+      color: rgba(255, 255, 255, 0.92);
+    }
+
+    .news-item a {
+      color: white;
+      text-decoration: underline;
+      text-decoration-color: rgba(255,255,255,0.45);
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 24px;
+      box-shadow: 0 10px 28px rgba(0,0,0,0.045);
+    }
+
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 1.15rem;
+      color: #111;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .publication {
+      margin-bottom: 16px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .publication:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .publication-title {
+      font-weight: 850;
+      color: #111;
+    }
+
+    .publication-meta {
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .tag {
+      padding: 7px 11px;
+      border-radius: 999px;
+      background: rgba(18, 53, 91, 0.08);
+      color: var(--blue);
+      font-size: 0.86rem;
+      font-weight: 750;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 14px;
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 18px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 20px;
+    }
+
+    .timeline-date {
+      font-weight: 850;
+      color: var(--accent);
+    }
+
+    .contact-box {
+      background: #111;
+      color: white;
+      border-radius: 30px;
+      padding: 30px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      align-items: center;
+    }
+
+    .contact-box h2 {
+      color: white;
+    }
+
+    .contact-box p {
+      color: rgba(255,255,255,0.75);
+    }
+
+    .contact-links {
+      display: grid;
+      gap: 10px;
+    }
+
+    .contact-links a {
+      color: white;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.14);
+      padding: 13px 15px;
+      border-radius: 16px;
+    }
+
     footer {
-      margin-top: 50px;
-      padding-top: 20px;
-      border-top: 1px solid #ddd;
-      color: #666;
-      font-size: 0.9rem;
+      margin-top: 42px;
+      color: var(--muted);
+      font-size: 0.92rem;
+      text-align: center;
+    }
+
+    @media (max-width: 850px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .news-grid,
+      .card-grid,
+      .contact-box {
+        grid-template-columns: 1fr;
+      }
+
+      .photo-card {
+        max-width: 420px;
+        margin: 0 auto;
+      }
+
+      .timeline-item {
+        grid-template-columns: 1fr;
+      }
+
+      .nav {
+        align-items: flex-start;
+        flex-direction: column;
+        margin-bottom: 35px;
+      }
     }
   </style>
 </head>
 
 <body>
-  <header>
-    <h1>Gibbs Nwemadji Tiako</h1>
+  <main class="page">
+    <nav class="nav">
+      <div class="brand">Gibbs Nwemadji Tiako</div>
 
-    <p class="subtitle">
-      PhD Student in Theoretical and Scientific Data Science, SISSA
-    </p>
+      <div class="nav-links">
+        <a href="#news">News</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
 
-    <p>
-      I work at the interface of machine learning, statistical physics,
-      statistical inference, deep learning, information theory, and quantum
-      machine learning.
-    </p>
+    <section class="hero">
+      <div class="hero-card">
+        <span class="eyebrow">Machine Learning · Statistical Physics · Theory</span>
 
-    <div class="nav">
-      <a href="#news">News</a>
-      <a href="#research">Research</a>
-      <a href="#publications">Publications</a>
-      <a href="#education">Education</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </header>
+        <h1>Gibbs Nwemadji Tiako</h1>
 
-  <section id="news" class="news-box">
-    <h2>News</h2>
+        <p class="subtitle">
+          PhD student in Theoretical and Scientific Data Science at SISSA,
+          working on learning dynamics, scaling laws, superposition, LoRA
+          fine-tuning, and teacher-student models.
+        </p>
 
-    <div class="news-item">
-      <span class="news-date">August–September 2026</span>
-      <p>
-        Upcoming talk at
-        <a href="https://sites.google.com/view/rockinai3/home-page" target="_blank" rel="noopener noreferrer">
-          ROCKIN' AI 3.0
-        </a>,
-        Roccella Ionica, Italy.
-      </p>
-    </div>
+        <p>
+          My research sits at the interface of machine learning, statistical
+          inference, deep learning, information theory, statistical physics, and
+          quantum machine learning.
+        </p>
 
-    <div class="news-item">
-      <span class="news-date">July 2026</span>
-      <p>
-        Selected to participate in
-        <a href="https://indico.ictp.it/event/11153" target="_blank" rel="noopener noreferrer">
-          Youth in High-Dimensions: Recent Progress in Machine Learning,
-          High-Dimensional Statistics and Inference
+        <div class="tag-row">
+          <span class="tag">Scaling laws</span>
+          <span class="tag">LoRA fine-tuning</span>
+          <span class="tag">Teacher-student models</span>
+          <span class="tag">Statistical physics</span>
+          <span class="tag">Quantum ML</span>
+        </div>
+
+        <div class="hero-actions">
+          <a class="button primary" href="#publications">View publications</a>
+          <a class="button secondary" href="mailto:tiakogibbs@gmail.com">Contact me</a>
+        </div>
+      </div>
+
+      <div class="photo-card">
+        <img src="assets/profile.jpg" alt="Portrait of Gibbs Nwemadji Tiako" />
+        <div class="photo-caption">
+          Visiting PhD student at Yale University, 2026
+        </div>
+      </div>
+    </section>
+
+    <section id="news" class="news-panel">
+      <h2>News</h2>
+
+      <div class="news-grid">
+        <div class="news-item">
+          <span class="news-date">Aug–Sept 2026</span>
+          <p>
+            Upcoming talk at
+            <a href="https://sites.google.com/view/rockinai3/home-page" target="_blank" rel="noopener noreferrer">
+              ROCKIN' AI 3.0
+            </a>,
+            Roccella Ionica, Italy.
+          </p>
+        </div>
+
+        <div class="news-item">
+          <span class="news-date">July 2026</span>
+          <p>
+            Selected to participate in
+            <a href="https://indico.ictp.it/event/11153" target="_blank" rel="noopener noreferrer">
+              Youth in High-Dimensions
+            </a>
+            at ICTP, Trieste.
+          </p>
+        </div>
+
+        <div class="news-item">
+          <span class="news-date">May 2026</span>
+          <p>
+            Invited talk at Boston College on learning dynamics, scaling laws,
+            and related theoretical questions in machine learning.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="research" class="section">
+      <div class="section-header">
+        <h2>Research</h2>
+        <p class="section-note">
+          Theory-driven machine learning with a statistical physics viewpoint.
+        </p>
+      </div>
+
+      <div class="card-grid">
+        <div class="card">
+          <h3>Learning dynamics and LoRA fine-tuning</h3>
+          <p>
+            I study how pre-training shapes downstream adaptation, with a
+            particular interest in Low-Rank Adaptation and dynamical mechanisms
+            that can help or hurt fine-tuning.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Scaling laws and superposition</h3>
+          <p>
+            I am interested in whether scaling laws can emerge from
+            superposition alone, and how feature geometry affects the observed
+            decay of error with model size.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Teacher-student models</h3>
+          <p>
+            I use teacher-student settings to isolate mechanisms of
+            specialization, representation learning, generalization, and
+            approximation in neural networks.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Quantum machine learning</h3>
+          <p>
+            My earlier work includes questions at the intersection of quantum
+            information, quantum algorithms, and learning theory.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="publications" class="section">
+      <div class="section-header">
+        <h2>Preprints and Publications</h2>
+      </div>
+
+      <div class="card">
+        <div class="publication">
+          <div class="publication-title">
+            When pre-training hurts LoRA fine-tuning: a dynamical analysis via single-index models
+          </div>
+          <div class="publication-meta">
+            Gibbs Nwemadji, Bruno Loureiro, Jean Barbier.
+            arXiv:2602.02855, 2026.
+          </div>
+        </div>
+
+        <div class="publication">
+          <div class="publication-title">
+            Generalization performance of narrow one-hidden layer networks in the teacher-student setting
+          </div>
+          <div class="publication-meta">
+            Rodrigo Pérez Ortiz, Gibbs Nwemadji, Jean Barbier, Federica Gerace,
+            Alessandro Ingrosso, Clarissa Lauditi, Enrico M. Malatesta.
+            Journal of Statistical Mechanics: Theory and Experiment, 2026.
+          </div>
+        </div>
+
+        <div class="publication">
+          <div class="publication-title">
+            On the Capacity of a Quantum Perceptron for storing Biased Patterns
+          </div>
+          <div class="publication-meta">
+            Fabio Benatti, Giovanni Gramegna, Stefano Mancini, Gibbs Nwemadji.
+            Journal of Physics A, 2024.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="section">
+      <div class="section-header">
+        <h2>Education and Visits</h2>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-date">2026</div>
+          <div>
+            <strong>Yale University</strong><br />
+            Visiting PhD student working with Prof. John Sous on superposition,
+            scaling laws, and representations induced by LoRA fine-tuning.
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">2022–2026</div>
+          <div>
+            <strong>SISSA, Italy</strong><br />
+            PhD in Theoretical and Scientific Data Science.
+            Supervisor: Prof. Jean Barbier.
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">2025</div>
+          <div>
+            <strong>École Normale Supérieure, Paris</strong><br />
+            Visiting PhD student working with Prof. Bruno Loureiro on a theory
+            for Low-Rank Adaptation fine-tuning.
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">2021–2022</div>
+          <div>
+            <strong>ICTP, Italy</strong><br />
+            Postgraduate Diploma in Physics, Quantitative Life Sciences.
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">2020–2021</div>
+          <div>
+            <strong>AIMS Cameroon</strong><br />
+            Structured Master's Degree in Mathematical Sciences, Data Science.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-box">
+      <div>
+        <h2>Contact</h2>
+        <p>
+          I am always happy to discuss machine learning theory, statistical
+          physics, scaling laws, LoRA fine-tuning, and related questions.
+        </p>
+      </div>
+
+      <div class="contact-links">
+        <a href="mailto:tiakogibbs@gmail.com">tiakogibbs@gmail.com</a>
+        <a href="https://github.com/GibbsNwemadji" target="_blank" rel="noopener noreferrer">
+          GitHub · GibbsNwemadji
         </a>
-        at ICTP, Trieste.
-      </p>
-    </div>
+        <a href="https://www.linkedin.com/in/gibbs-nwemadji" target="_blank" rel="noopener noreferrer">
+          LinkedIn · gibbs-nwemadji
+        </a>
+      </div>
+    </section>
 
-    <div class="news-item">
-      <span class="news-date">May 2026</span>
-      <p>
-        Invited talk at Boston College.
-      </p>
-    </div>
-  </section>
-
-  <section id="research">
-    <h2>Research</h2>
-
-    <p>
-      My current research focuses on the theoretical understanding of learning
-      dynamics in neural networks, with particular interest in scaling laws,
-      superposition, Low-Rank Adaptation fine-tuning, and teacher-student models.
-    </p>
-
-    <p>
-      I am currently visiting Yale University, where I work on understanding how
-      superposition can induce scaling laws in deep neural networks, and on the
-      representations induced by LoRA fine-tuning in large language models.
-    </p>
-  </section>
-
-  <section id="publications">
-    <h2>Preprints and Publications</h2>
-
-    <div class="publication">
-      <strong>When pre-training hurts LoRA fine-tuning: a dynamical analysis via single-index models</strong><br />
-      Gibbs Nwemadji, Bruno Loureiro, Jean Barbier.
-      arXiv:2602.02855, 2026.
-    </div>
-
-    <div class="publication">
-      <strong>Generalization performance of narrow one-hidden layer networks in the teacher-student setting</strong><br />
-      Rodrigo Pérez Ortiz, Gibbs Nwemadji, Jean Barbier, Federica Gerace,
-      Alessandro Ingrosso, Clarissa Lauditi, Enrico M. Malatesta.
-      Journal of Statistical Mechanics: Theory and Experiment, 2026.
-    </div>
-
-    <div class="publication">
-      <strong>On the Capacity of a Quantum Perceptron for storing Biased Patterns</strong><br />
-      Fabio Benatti, Giovanni Gramegna, Stefano Mancini, Gibbs Nwemadji.
-      Journal of Physics A, 2024.
-    </div>
-  </section>
-
-  <section id="education">
-    <h2>Education</h2>
-
-    <p>
-      <strong>PhD in Theoretical and Scientific Data Science</strong><br />
-      Scuola Internazionale Superiore di Studi Avanzati, SISSA, Italy.
-    </p>
-
-    <p>
-      <strong>Postgraduate Diploma in Physics</strong><br />
-      The Abdus Salam International Centre for Theoretical Physics, ICTP, Italy.
-    </p>
-
-    <p>
-      <strong>Structured Master's Degree in Mathematical Sciences</strong><br />
-      African Institute for Mathematical Sciences, AIMS Cameroon.
-    </p>
-
-    <p>
-      <strong>Master's Degree and Bachelor's Degree in Physics</strong><br />
-      University of Douala, Cameroon.
-    </p>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-
-    <p>
-      Email:
-      <a href="mailto:tiakogibbs@gmail.com">tiakogibbs@gmail.com</a><br />
-
-      GitHub:
-      <a href="https://github.com/GibbsNwemadji" target="_blank" rel="noopener noreferrer">
-        GibbsNwemadji
-      </a><br />
-
-      LinkedIn:
-      <a href="https://www.linkedin.com/in/gibbs-nwemadji" target="_blank" rel="noopener noreferrer">
-        gibbs-nwemadji
-      </a>
-    </p>
-  </section>
-
-  <footer>
-    <p>© 2026 Gibbs Nwemadji Tiako</p>
-  </footer>
+    <footer>
+      © 2026 Gibbs Nwemadji Tiako. Built with GitHub Pages.
+    </footer>
+  </main>
 </body>
 </html>
