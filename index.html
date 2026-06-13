@@ -481,7 +481,7 @@
 
     .event {
       display: grid;
-      grid-template-columns: 120px 1fr auto;
+      grid-template-columns: 125px 1fr auto;
       gap: 14px;
       align-items: start;
       background: rgba(255, 249, 238, 0.84);
@@ -493,26 +493,26 @@
     .event-date {
       color: var(--brown);
       font-weight: 900;
-      font-size: 0.78rem;
+      font-size: 0.76rem;
       white-space: nowrap;
     }
 
     .event-title {
       color: var(--brown-dark);
       font-weight: 780;
-      font-size: 0.92rem;
+      font-size: 0.91rem;
     }
 
     .event-note {
       display: block;
       margin-top: 3px;
       color: var(--muted);
-      font-size: 0.84rem;
+      font-size: 0.83rem;
     }
 
     .event-type {
       color: var(--blue);
-      font-size: 0.65rem;
+      font-size: 0.64rem;
       font-weight: 850;
       letter-spacing: 0.08em;
       text-transform: uppercase;
@@ -563,75 +563,6 @@
       text-align: center;
     }
 
-    .events {
-      display: grid;
-      gap: 10px;
-    }
-    
-    .event {
-      display: grid;
-      grid-template-columns: 125px 1fr auto;
-      gap: 14px;
-      align-items: start;
-      background: rgba(255, 249, 238, 0.84);
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      padding: 14px 16px;
-    }
-    
-    .event-date {
-      color: var(--brown);
-      font-weight: 900;
-      font-size: 0.76rem;
-      white-space: nowrap;
-    }
-    
-    .event-title {
-      color: var(--brown-dark);
-      font-weight: 780;
-      font-size: 0.91rem;
-    }
-    
-    .event-note {
-      display: block;
-      margin-top: 3px;
-      color: var(--muted);
-      font-size: 0.83rem;
-    }
-    
-    .event-type {
-      color: var(--blue);
-      font-size: 0.64rem;
-      font-weight: 850;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      white-space: nowrap;
-    }
-    
-    @media (max-width: 900px) {
-      .event {
-        grid-template-columns: 110px 1fr;
-      }
-    
-      .event-type {
-        grid-column: 2;
-      }
-    }
-    
-    @media (max-width: 640px) {
-      .event {
-        grid-template-columns: 1fr;
-        gap: 5px;
-      }
-    
-      .event-type {
-        grid-column: auto;
-      }
-    }
-    
-    
-
-    
     @media (max-width: 900px) {
       .hero {
         grid-template-columns: 1fr;
@@ -976,10 +907,10 @@
 
     <section id="events">
       <div class="section-head">
-        <h2>Talks, Schools & Conferences</h2>
+        <h2>Talks, Posters, Schools & Conferences</h2>
         <p class="section-note">
-          A timeline of recent and past scientific activities, including talks,
-          schools, workshops, and conference participation.
+          A timeline of recent and past scientific activities, including invited talks,
+          poster presentations, schools, workshops, and conference participation.
         </p>
       </div>
 
@@ -1017,16 +948,19 @@
             <div class="event-title">ROCKIN' AI 2025</div>
             <span class="event-note">Roccella Ionica, Italy.</span>
           </div>
-          <div class="event-type">Participation</div>
+          <div class="event-type">Poster & participant</div>
         </div>
 
         <div class="event">
           <div class="event-date">Jul 3 – 10, 2025</div>
           <div>
             <div class="event-title">Youth in High-Dimensions & How Creative is Generative AI?</div>
-            <span class="event-note">ICTP, Trieste.</span>
+            <span class="event-note">
+              Recent Progress in Machine Learning, High-Dimensional Statistics and Inference;
+              Perspectives from Science and Philosophy. ICTP, Trieste.
+            </span>
           </div>
-          <div class="event-type">Participation</div>
+          <div class="event-type">Poster & participant</div>
         </div>
 
         <div class="event">
@@ -1044,16 +978,19 @@
             <div class="event-title">ROCKIN' AI 2024</div>
             <span class="event-note">Roccella Ionica, Italy.</span>
           </div>
-          <div class="event-type">Participation</div>
+          <div class="event-type">Poster & participant</div>
         </div>
 
         <div class="event">
           <div class="event-date">May 20 – 24, 2024</div>
           <div>
             <div class="event-title">Youth in High-Dimensions</div>
-            <span class="event-note">ICTP, Trieste.</span>
+            <span class="event-note">
+              Recent Progress in Machine Learning, High-Dimensional Statistics and Inference.
+              ICTP, Trieste.
+            </span>
           </div>
-          <div class="event-type">Participation</div>
+          <div class="event-type">Poster & participant</div>
         </div>
 
         <div class="event">
@@ -1078,9 +1015,12 @@
           <div class="event-date">May 21 – Jun 2, 2023</div>
           <div>
             <div class="event-title">Youth in High-Dimensions</div>
-            <span class="event-note">ICTP, Trieste.</span>
+            <span class="event-note">
+              Recent Progress in Machine Learning, High-Dimensional Statistics and Inference.
+              ICTP, Trieste.
+            </span>
           </div>
-          <div class="event-type">Participation</div>
+          <div class="event-type">Poster & participant</div>
         </div>
 
         <div class="event">
@@ -1164,6 +1104,17 @@
             </p>
           </div>
         </div>
+
+        <div class="timeline-item">
+          <div class="year">2015–2020</div>
+          <div>
+            <strong>University of Douala — Cameroon</strong>
+            <p>
+              Master's degree in Physics, majoring in Science and Radiation Matter,
+              and Bachelor's degree in Physics, majoring in Fundamental Physics.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -1191,7 +1142,7 @@
     </section>
 
     <footer>
-      © 2026 Gibbs Nwemadji · Built with GitHub Pages
+      © 2026 Gibbs Nwemadji
     </footer>
   </main>
 </body>
