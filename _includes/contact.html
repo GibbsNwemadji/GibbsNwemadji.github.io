@@ -1,0 +1,19 @@
+<section id="contact" class="contact">
+  <div>
+    <h2>Contact</h2>
+    <p>{{ site.data.contact.intro }}</p>
+  </div>
+
+  <div class="contact-links">
+    {% for link in site.data.contact.links %}
+      {% assign href = link.url %}
+      {% unless href contains 'http' or href contains 'mailto:' or href contains '#' %}
+        {% assign href = href | relative_url %}
+      {% endunless %}
+      <a
+        href="{{ href }}"
+        {% if link.url contains 'http' %}target="_blank" rel="noopener noreferrer"{% endif %}
+      >{{ link.label }}</a>
+    {% endfor %}
+  </div>
+</section>

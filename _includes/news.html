@@ -1,0 +1,25 @@
+<aside id="news" class="news-card">
+  <div>
+    <div class="news-top">
+      <h2>News</h2>
+      <span class="live">Live log</span>
+    </div>
+
+    <div class="news-list">
+      {% for item in site.data.news %}
+        <div class="news-item">
+          <span class="news-date">{{ item.date }}</span>
+          <p>
+            {% if item.link_url and item.link_text %}
+              {{ item.before }}
+              <a href="{{ item.link_url }}" target="_blank" rel="noopener noreferrer">{{ item.link_text }}</a>
+              {{ item.after }}
+            {% else %}
+              {{ item.text }}
+            {% endif %}
+          </p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</aside>

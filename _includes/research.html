@@ -1,0 +1,15 @@
+<section id="research">
+  <div class="section-head">
+    <h2>Research</h2>
+    <p class="section-note">{{ site.data.research.intro }}</p>
+  </div>
+
+  <div class="grid-2">
+    {% for item in site.data.research.items %}
+      <article class="card">
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.text }}</p>
+      </article>
+    {% endfor %}
+  </div>
+</section>

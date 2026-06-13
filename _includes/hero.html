@@ -1,0 +1,39 @@
+{% assign profile = site.data.profile %}
+
+<section id="home" class="hero">
+  <div class="profile-card">
+    <div class="photo-block">
+      <img
+        class="portrait"
+        src="{{ site.profile_image | relative_url }}"
+        alt="Portrait of {{ profile.name }}"
+        onerror="this.style.display='none'; this.parentElement.classList.add('missing-photo');"
+      />
+      <div class="photo-note">{{ profile.photo_note }}</div>
+    </div>
+
+    <div class="intro">
+      <div class="eyebrow">{{ profile.eyebrow }}</div>
+
+      <h1>{{ profile.name }}</h1>
+
+      <p class="intro-text">{{ profile.summary }}</p>
+
+      <div class="quick-links">
+        {% for link in profile.links %}
+          {% assign href = link.url %}
+          {% unless href contains 'http' or href contains 'mailto:' or href contains '#' %}
+            {% assign href = href | relative_url %}
+          {% endunless %}
+          <a
+            class="button{% if link.primary %} primary{% endif %}"
+            href="{{ href }}"
+            {% if link.url contains 'http' %}target="_blank" rel="noopener noreferrer"{% endif %}
+          >{{ link.label }}</a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+  {% include news.html %}
+</section>

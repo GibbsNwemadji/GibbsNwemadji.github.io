@@ -1,0 +1,26 @@
+<section id="publications">
+  <div class="section-head">
+    <h2>Preprints and Publications</h2>
+    <p class="section-note">
+      Recent work around learning theory, neural networks, statistical physics,
+      and quantum learning.
+    </p>
+  </div>
+
+  <div class="card">
+    {% for pub in site.data.publications %}
+      <div class="publication">
+        <div class="year">{{ pub.year }}</div>
+        <div>
+          <div class="pub-title">{{ pub.title }}</div>
+          <div class="pub-meta">{{ pub.authors }} {{ pub.venue }}</div>
+          {% if pub.links %}
+            {% for link in pub.links %}
+              <a class="pub-link" href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ link.label }}</a>
+            {% endfor %}
+          {% endif %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>
